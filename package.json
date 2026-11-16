@@ -2,7 +2,6 @@
   "name": "dr-senthilkumar-portfolio",
   "version": "1.0.0",
   "description": "Academic & Innovation Portfolio for Dr. R. Senthilkumar",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
