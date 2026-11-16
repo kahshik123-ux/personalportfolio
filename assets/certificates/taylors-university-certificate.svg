@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 565" width="100%" height="100%">
+  <defs>
+    <linearGradient id="taylorsBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fff1f2"/>
+    </linearGradient>
+    <linearGradient id="taylorsRed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="565" fill="url(#taylorsBg)"/>
+
+  <!-- Ornate Border -->
+  <rect x="25" y="25" width="750" height="515" fill="none" stroke="#be123c" stroke-width="2.5"/>
+  <rect x="33" y="33" width="734" height="499" fill="none" stroke="#e11d48" stroke-width="1" stroke-dasharray="8 4"/>
+
+  <!-- Taylor's University Header -->
+  <g transform="translate(60, 48)">
+    <rect width="180" height="38" rx="4" fill="#881337"/>
+    <text x="90" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">TAYLOR'S</text>
+    <text x="90" y="33" font-family="sans-serif" font-size="7" font-weight="700" fill="#fecdd3" text-anchor="middle">UNIVERSITY, MALAYSIA</text>
+  </g>
+
+  <!-- International Badge Right -->
+  <g transform="translate(620, 45)">
+    <circle cx="45" cy="35" r="30" fill="#be123c"/>
+    <text x="45" y="32" font-family="sans-serif" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">GLOBAL</text>
+    <text x="45" y="44" font-family="sans-serif" font-size="8" font-weight="700" fill="#fecdd3" text-anchor="middle">EXCELLENCE</text>
+  </g>
+
+  <text x="400" y="160" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#881337" text-anchor="middle" letter-spacing="2">
+    INTERNATIONAL CERTIFICATE OF COMMENDATION
+  </text>
+  <text x="400" y="190" font-family="Georgia, serif" font-size="14" font-style="italic" fill="#475569" text-anchor="middle">
+    In recognition of distinguished academic leadership &amp; cross-border innovation
+  </text>
+
+  <!-- Name -->
+  <text x="400" y="250" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="#064e29" text-anchor="middle">
+    Dr. R. SENTHILKUMAR
+  </text>
+  <line x1="220" y1="262" x2="580" y2="262" stroke="#be123c" stroke-width="2.5"/>
+
+  <text x="400" y="292" font-family="Georgia, serif" font-size="14" font-weight="600" fill="#334155" text-anchor="middle">
+    Associate Professor — Hindusthan Institute of Technology, Coimbatore
+  </text>
+
+  <text x="400" y="335" font-family="sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">
+    for mentoring winning student teams and outstanding collaboration at the
+  </text>
+  <text x="400" y="360" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="800" fill="#be123c" text-anchor="middle">
+    Taylor’s University International Innovation &amp; Research Symposium
+  </text>
+
+  <!-- Seal -->
+  <g transform="translate(100, 410)">
+    <circle cx="45" cy="45" r="42" fill="#fff1f2" stroke="#be123c" stroke-width="2.5"/>
+    <text x="45" y="42" font-family="sans-serif" font-size="9" font-weight="900" fill="#881337" text-anchor="middle">TAYLOR'S</text>
+    <text x="45" y="55" font-family="sans-serif" font-size="8" font-weight="700" fill="#be123c" text-anchor="middle">SEAL OF HONOR</text>
+  </g>
+
+  <!-- Vice Chancellor Signature -->
+  <g transform="translate(540, 470)">
+    <line x1="0" y1="0" x2="170" y2="0" stroke="#374151" stroke-width="1.2"/>
+    <text x="85" y="16" font-family="sans-serif" font-size="11" font-weight="700" fill="#111827" text-anchor="middle">Prof. Michael Driscoll</text>
+    <text x="85" y="30" font-family="sans-serif" font-size="9.5" fill="#4b5563" text-anchor="middle">Vice-Chancellor, Taylor's University</text>
+  </g>
+</svg>

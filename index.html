@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. R. Senthilkumar | Associate Professor - Hindusthan Institute of Technology</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Dr. R. Senthilkumar | Academic & Innovation Portfolio">
+  <meta name="description" content="Portfolio of Dr. R. Senthilkumar, Associate Professor at Hindusthan Institute of Technology, Coimbatore. Hackathon mentor for SIH 1st Prize, Techgium Finalist, IIT Conclave, YUVA Award, and Taylor's University Malaysia.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Hidden File Input for Live Photo Replacement -->
+  <input type="file" id="globalImageFileInput" accept="image/*" style="display: none;">
+
+  <!-- ================= TOP NAVBAR (EVENT-BY-EVENT NAV) ================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#profile" class="brand-logo">
+        <img src="assets/profile/dr-senthilkumar.jpg" alt="Dr. R. Senthilkumar" class="brand-avatar-mini">
+        <span>Dr. R. SENTHILKUMAR</span>
+        <span class="brand-badge">HIT CSE</span>
+      </a>
+
+      <!-- Navigation Pills Arranged by Events -->
+      <ul class="nav-pills" id="navPillsList">
+        <li><a href="#profile" class="nav-link active">Profile</a></li>
+        <li><a href="#event-sih" class="nav-link">SIH 2025</a></li>
+        <li><a href="#event-techgium" class="nav-link">Techgium</a></li>
+        <li><a href="#event-nptel" class="nav-link">NPTEL &amp; IITM</a></li>
+        <li><a href="#event-yuva" class="nav-link">YUVA Awards</a></li>
+        <li><a href="#event-taylors" class="nav-link">Taylor's Univ</a></li>
+        <li><a href="#event-iit" class="nav-link">IIT &amp; Outreach</a></li>
+        <li><a href="#event-funding" class="nav-link">Grants</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#experience" class="nav-link">Academics</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button class="btn-nav-action" onclick="triggerPrintCV()" title="Print / Save CV">
+          <span>📄</span> <span>CV</span>
+        </button>
+        <button class="btn-nav-action" onclick="resetDefaultImages()" title="Reset custom uploaded images"
+          style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25);">
+          <span>🔄</span> <span>Reset</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN WRAPPER ================= -->
+  <main class="main-wrapper">
+
+    <!-- ================= 1. PROFILE SECTION ================= -->
+    <div class="content-card-frame" id="profile">
+      <div class="profile-section-hero">
+        
+        <!-- Left: Portrait Photo -->
+        <div class="profile-avatar-wrapper">
+          <div class="profile-photo-container">
+            <img id="facultyAvatarImg" src="assets/profile/dr-senthilkumar.jpg" alt="Dr. R. Senthilkumar" class="profile-img">
+            <div class="photo-overlay-badge">
+              Associate Professor — HIT
+            </div>
+          </div>
+          <div class="avatar-actions">
+            <button class="btn-upload-avatar" onclick="triggerReplaceAvatar()">
+              📷 Upload Photo
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Faculty Details & Personal Grid -->
+        <div class="profile-meta-col">
+          <div class="profile-name-title">
+            <h1 class="faculty-name" id="facultyNameDisplay">
+              Dr. R. SENTHILKUMAR <span class="faculty-degrees">M.E., Ph.D.</span>
+            </h1>
+            <div class="faculty-designation" id="facultyDesigDisplay">
+              Associate Professor - Department of Computer Science &amp; Engineering
+            </div>
+            <div class="faculty-institution" id="facultyInstDisplay">
+              <span class="institution-icon">🏛️</span>
+              <span>Hindusthan Institute of Technology, Coimbatore</span>
+            </div>
+          </div>
+
+          <!-- Social / Professional Buttons -->
+          <div class="profile-social-row">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="pill-btn pill-btn-green">
+              <span>in</span> <span>LinkedIn</span>
+            </a>
+            <a href="https://scholar.google.com" target="_blank" rel="noopener" class="pill-btn pill-btn-teal">
+              <span>📚</span> <span>Google Scholar</span>
+            </a>
+            <a href="https://orcid.org" target="_blank" rel="noopener" class="pill-btn pill-btn-teal">
+              <span>🆔</span> <span>ORCID</span>
+            </a>
+            <a href="mailto:sentinfo@gmail.com" class="pill-btn-icon-only" title="Send Email">
+              ✉️
+            </a>
+            <a href="tel:+919789591714" class="pill-btn-icon-only" title="Call Contact">
+              📞
+            </a>
+          </div>
+
+          <!-- Personal Details Container -->
+          <div class="personal-details-box">
+            <div class="box-title">
+              <span>📋</span> <span>Personal Details</span>
+            </div>
+            <div class="personal-grid" id="personalDetailsGrid">
+              <!-- Rendered dynamically by js/app.js -->
+            </div>
+          </div>
+
+          <!-- Quick Stats Counter Strip -->
+          <div class="stats-counter-strip" id="profileStatsStrip">
+            <!-- Rendered dynamically by js/app.js -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= EVENT JUMP STRIP ================= -->
+    <div class="highlight-ribbon-showcase">
+      <div class="ribbon-header">
+        <div class="ribbon-title">
+          <span>🏆</span> <span>Events &amp; Innovation Portfolios</span>
+        </div>
+        <span style="font-size: 0.85rem; color: #a7f3d0; font-weight: 600;">
+          Arranged by Event &amp; Prestigious Recognitions
+        </span>
+      </div>
+      <div class="ribbon-badges-row">
+        <div class="ribbon-chip" onclick="document.getElementById('event-sih').scrollIntoView({behavior:'smooth'})">
+          <span>🥇</span> <span>Smart India Hackathon (SIH 2025)</span>
+        </div>
+        <div class="ribbon-chip" onclick="document.getElementById('event-techgium').scrollIntoView({behavior:'smooth'})">
+          <span>⚡</span> <span>L&amp;T Techgium (8th Edition)</span>
+        </div>
+        <div class="ribbon-chip" onclick="document.getElementById('event-nptel').scrollIntoView({behavior:'smooth'})">
+          <span>🌟</span> <span>NPTEL &amp; IIT Madras (Discipline Star &amp; SPOC)</span>
+        </div>
+        <div class="ribbon-chip" onclick="document.getElementById('event-yuva').scrollIntoView({behavior:'smooth'})">
+          <span>🎖️</span> <span>YUVA Awards 2024 (Yi / CII)</span>
+        </div>
+        <div class="ribbon-chip" onclick="document.getElementById('event-taylors').scrollIntoView({behavior:'smooth'})">
+          <span>🌍</span> <span>Taylor's University (Malaysia) Best Paper</span>
+        </div>
+        <div class="ribbon-chip" onclick="document.getElementById('event-iit').scrollIntoView({behavior:'smooth'})">
+          <span>🏛️</span> <span>IIT Conclave &amp; Juries</span>
+        </div>
+        <div class="ribbon-chip" onclick="document.getElementById('event-funding').scrollIntoView({behavior:'smooth'})">
+          <span>💼</span> <span>Research Grants (DST / TNSCST)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= EVENT 1: SMART INDIA HACKATHON (SIH 2025) ================= -->
+    <section class="event-showcase-section event-theme-sih" id="event-sih">
+      <div class="event-header-bar">
+        <div class="event-title-group">
+          <span class="event-kicker kicker-sih">🏆 NATIONAL HACKATHON GRAND FINALE</span>
+          <h2 class="event-heading">Smart India Hackathon (SIH 2025) — Software Edition</h2>
+          <p class="event-summary-text">
+            Mentored <strong>Team TECH_WIZARDS</strong> from <strong>Hindusthan Institute of Technology, Coimbatore</strong> at the national Grand Finale. Conferred the official <strong>Mentor Certificate</strong> by Ministry of Education, AICTE &amp; MIC.
+          </p>
+        </div>
+        <div class="event-badges-stack">
+          <span class="event-meta-pill">🏛️ MoE &amp; AICTE (Govt. of India)</span>
+          <span class="event-meta-pill">📌 PS ID: SIH25138</span>
+          <span class="event-meta-pill">📅 Dec 8–9, 2025</span>
+          <span class="event-meta-pill">👥 Team TECH_WIZARDS</span>
+        </div>
+      </div>
+
+      <!-- Zero-Empty-Space Media Grid -->
+      <div class="event-media-grid">
+        <!-- 1. Certificate -->
+        <div class="event-media-card" onclick="openDirectImageModal('Smart India Hackathon 2025 Mentor Certificate', 'Official Certificate awarded to SENTHILKUMAR R by Ministry of Education &amp; AICTE for exceptional contribution as Mentor', 'assets/certificates/sih-certificate.jpg', 'SIH Certificate 📜')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/certificates/sih-certificate.jpg" alt="SIH 2025 Mentor Certificate" loading="lazy">
+            <span class="event-media-badge">Official Certificate 📜</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Official Mentor Certificate</div>
+            <div class="event-media-desc">Conferred to Dr. R. Senthilkumar by Ministry of Education &amp; AICTE.</div>
+          </div>
+        </div>
+
+        <!-- 2. Team TECH_WIZARDS at Workstation -->
+        <div class="event-media-card" onclick="openDirectImageModal('Team TECH_WIZARDS at Workstation (HIT Coimbatore)', 'Students of Hindusthan Institute of Technology collaborating and coding at SIH 2025 Grand Finale (PS ID: SIH25138)', 'assets/team_photos/sih-tech-wizards-team.jpg', 'Team TECH_WIZARDS 👥')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/sih-tech-wizards-team.jpg" alt="Team TECH_WIZARDS at Workstation" loading="lazy">
+            <span class="event-media-badge">Team TECH_WIZARDS 👥</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Student Team at 36-Hr Workstation</div>
+            <div class="event-media-desc">HIT Coimbatore student team coding &amp; collaborating during the hackathon.</div>
+          </div>
+        </div>
+
+        <!-- 3. Technical Defense & Evaluation Table -->
+        <div class="event-media-card" onclick="openDirectImageModal('SIH 2025 Technical Evaluation &amp; Mentorship Table', 'Dr. R. Senthilkumar seated at the evaluation table alongside senior evaluators and students reviewing project implementation', 'assets/team_photos/sih-jury-evaluation.jpg', 'Evaluation 👨‍🏫')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/sih-jury-evaluation.jpg" alt="Technical Evaluation with Dr. Senthilkumar" loading="lazy">
+            <span class="event-media-badge">Evaluation Defense 👨‍🏫</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Live Evaluation &amp; Mentorship Session</div>
+            <div class="event-media-desc">Dr. R. Senthilkumar with senior evaluators reviewing the live software prototype.</div>
+          </div>
+        </div>
+
+        <!-- 4. Grand Finale Official Backdrop -->
+        <div class="event-media-card" onclick="openDirectImageModal('SIH 2025 Grand Finale Official Backdrop', 'Dr. R. Senthilkumar in the official SIH Mentor white hoodie at the Grand Finale backdrop', 'assets/team_photos/sih-team-backdrop.jpg', 'Mentor Felicitation 🌟')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/sih-team-backdrop.jpg" alt="Dr. Senthilkumar at SIH Backdrop" loading="lazy">
+            <span class="event-media-badge">Grand Finale Venue 🌟</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Official Mentor at Grand Finale</div>
+            <div class="event-media-desc">Wearing the official SIH 2025 white mentor hoodie at the national conclave.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENT 2: L&T TECHNOLOGY SERVICES TECHGIUM (8TH EDITION) ================= -->
+    <section class="event-showcase-section event-theme-techgium" id="event-techgium">
+      <div class="event-header-bar">
+        <div class="event-title-group">
+          <span class="event-kicker kicker-techgium">⚡ INDUSTRY 4.0 OPEN INNOVATION</span>
+          <h2 class="event-heading">L&amp;T Technology Services TECHGIUM® (8th Edition)</h2>
+          <p class="event-summary-text">
+            Mentored <strong>Team HIT Innovators</strong> at the Grand Finale of TECHGIUM 8th Edition. Guided the <strong>Automated Razor Blade Inspection System using IoT (PID # 1509)</strong>. Conferred Certificate of Appreciation signed by CEO Amit Chadha.
+          </p>
+        </div>
+        <div class="event-badges-stack">
+          <span class="event-meta-pill">🏢 L&amp;T Technology Services</span>
+          <span class="event-meta-pill">📌 PID # 1509</span>
+          <span class="event-meta-pill">📅 16th May 2025</span>
+          <span class="event-meta-pill">🏆 National Finalist Mentor</span>
+        </div>
+      </div>
+
+      <!-- Zero-Empty-Space Media Grid -->
+      <div class="event-media-grid">
+        <!-- 1. Certificate -->
+        <div class="event-media-card" onclick="openDirectImageModal('Techgium 8th Edition Certificate of Appreciation', 'L&amp;T Technology Services Certificate awarded to DR. R. SENTHILKUMAR signed by Amit Chadha (CEO &amp; MD, LTTS)', 'assets/certificates/techgium-certificate.jpg', 'Techgium Certificate 📜')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/certificates/techgium-certificate.jpg" alt="Techgium 8th Edition Certificate" loading="lazy">
+            <span class="event-media-badge">LTTS Certificate 📜</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Certificate of Appreciation</div>
+            <div class="event-media-desc">Signed by Amit Chadha (CEO &amp; MD, L&amp;T Technology Services Limited).</div>
+          </div>
+        </div>
+
+        <!-- 2. Team at Official Booth -->
+        <div class="event-media-card" onclick="openDirectImageModal('Techgium 8th Edition Team &amp; Booth (PID # 1509)', 'Dr. R. Senthilkumar seated with student engineering team at the official booth under the project banner', 'assets/team_photos/techgium-team-booth.jpg', 'PID # 1509 Team 👥')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/techgium-team-booth.jpg" alt="Techgium Team at Booth" loading="lazy">
+            <span class="event-media-badge">Team &amp; Booth 👥</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Team &amp; Mentor at Official Booth</div>
+            <div class="event-media-desc">Dr. R. Senthilkumar with students at the Automated Razor Blade Inspection booth.</div>
+          </div>
+        </div>
+
+        <!-- 3. Award Felicitation by LTTS Leadership -->
+        <div class="event-media-card" onclick="openDirectImageModal('Award Felicitation by LTTS Leadership', 'Dr. R. Senthilkumar receiving Techgium 8th Edition Certificate &amp; Memento from LTTS leadership in front of the 3D TECHGIUM monument', 'assets/team_photos/techgium-award-felicitation.jpg', 'LTTS Felicitation 🎖️')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/techgium-award-felicitation.jpg" alt="Award Felicitation by LTTS Leadership" loading="lazy">
+            <span class="event-media-badge">Award Felicitation 🎖️</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Felicitation by LTTS Leadership</div>
+            <div class="event-media-desc">Receiving the Certificate &amp; Memento at the living green wall &amp; 3D monument.</div>
+          </div>
+        </div>
+
+        <!-- 4. Prototype Demo & Interview -->
+        <div class="event-media-card" onclick="openDirectImageModal('Automated Razor Blade Inspection System Demo', 'Student innovators demonstrating IoT inspection prototype to media &amp; jury panel', 'assets/team_photos/techgium-prototype-demo.jpg', 'Live Demo ⚡')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/techgium-prototype-demo.jpg" alt="Techgium Prototype Demo" loading="lazy">
+            <span class="event-media-badge">Live Prototype Demo ⚡</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Live Prototype Demonstration</div>
+            <div class="event-media-desc">HIT student team demonstrating the IoT blade inspection testbed to jury &amp; media.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENT 3: SWAYAM - NPTEL & IIT MADRAS RECOGNITIONS ================= -->
+    <section class="event-showcase-section event-theme-nptel" id="event-nptel">
+      <div class="event-header-bar">
+        <div class="event-title-group">
+          <span class="event-kicker kicker-nptel">🌟 IIT MADRAS MOOC &amp; SPOC LEADERSHIP</span>
+          <h2 class="event-heading">NPTEL STAR — Discipline Star, Believer &amp; Active SPOC</h2>
+          <p class="event-summary-text">
+            Conferred <strong>Discipline Star in Computer Science and Engineering</strong>, <strong>NPTEL Believer</strong>, and <strong>Motivated Learner</strong> by IIT Madras. Honored as <strong>Active SPOC</strong> and NPTEL Brand Ambassador for Hindusthan Institute of Technology across consecutive cycles.
+          </p>
+        </div>
+        <div class="event-badges-stack">
+          <span class="event-meta-pill">🏛️ IIT Madras &amp; SWAYAM</span>
+          <span class="event-meta-pill">🏆 Discipline Star (CSE)</span>
+          <span class="event-meta-pill">🎖️ Active SPOC (2025–2026)</span>
+          <span class="event-meta-pill">🌟 NPTEL Believer</span>
+        </div>
+      </div>
+
+      <!-- Zero-Empty-Space Media Grid (Mixed aspect-ratios tailored to certificates) -->
+      <div class="event-media-grid">
+        <!-- 1. Discipline Star Certificate (Portrait) -->
+        <div class="event-media-card" onclick="openDirectImageModal('NPTEL Discipline Star Certificate (Jan-Apr 2025)', 'Certificate of Appreciation awarded to SENTHILKUMAR, Computer Science and Engineering, by IIT Madras', 'assets/certificates/nptel-discipline-star-cert.jpg', 'Discipline Star 🏆')">
+          <div class="event-card-img-box aspect-portrait">
+            <img src="assets/certificates/nptel-discipline-star-cert.jpg" alt="NPTEL Discipline Star Certificate" loading="lazy">
+            <span class="event-media-badge">Discipline Star (CSE) 🏆</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">NPTEL Discipline Star (CSE)</div>
+            <div class="event-media-desc">>50 weeks of learning in CSE with score >=55%.</div>
+          </div>
+        </div>
+
+        <!-- 2. Believer Certificate (Portrait) -->
+        <div class="event-media-card" onclick="openDirectImageModal('NPTEL Believer Certificate (Jan-Apr 2025)', 'Certificate awarded to SENTHILKUMAR for persistent examination success across 4+ consecutive cycles', 'assets/certificates/nptel-believer-cert.jpg', 'NPTEL Believer 🏅')">
+          <div class="event-card-img-box aspect-portrait">
+            <img src="assets/certificates/nptel-believer-cert.jpg" alt="NPTEL Believer Certificate" loading="lazy">
+            <span class="event-media-badge">NPTEL Believer 🏅</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">NPTEL Believer Certificate</div>
+            <div class="event-media-desc">Passed at least 4 consecutive semester exams.</div>
+          </div>
+        </div>
+
+        <!-- 3. Motivated Learner Certificate (Portrait) -->
+        <div class="event-media-card" onclick="openDirectImageModal('NPTEL Motivated Learner Certificate (Jan-Apr 2025)', 'Certificate awarded to SENTHILKUMAR for appearing in 8+ exams across 4 semesters', 'assets/certificates/nptel-motivated-learner-cert.jpg', 'Motivated Learner 🌟')">
+          <div class="event-card-img-box aspect-portrait">
+            <img src="assets/certificates/nptel-motivated-learner-cert.jpg" alt="NPTEL Motivated Learner Certificate" loading="lazy">
+            <span class="event-media-badge">Motivated Learner 🌟</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Motivated Learner Certificate</div>
+            <div class="event-media-desc">Appeared in 8+ exams, passed in 75%+ courses.</div>
+          </div>
+        </div>
+
+        <!-- 4. Active SPOC (Jul-Dec 2025) (Landscape) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Active SPOC Certificate (Jul-Dec 2025)', 'Awarded to R. SENTHILKUMAR of Hindusthan Institute of Technology for instrumental role as SPOC &amp; Brand Ambassador', 'assets/certificates/nptel-active-spoc-2025-cert.jpg', 'Active SPOC 🎖️')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/certificates/nptel-active-spoc-2025-cert.jpg" alt="Active SPOC Jul-Dec 2025" loading="lazy">
+            <span class="event-media-badge">Active SPOC 2025 🎖️</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Active SPOC (Jul–Dec 2025)</div>
+            <div class="event-media-desc">SWAYAM-NPTEL Local Chapter leadership at HIT.</div>
+          </div>
+        </div>
+
+        <!-- 5. Active SPOC (Jan-Apr 2026) (Landscape) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Active SPOC Certificate (Jan-Apr 2026)', 'Awarded to R. SENTHILKUMAR of Hindusthan Institute of Technology for sustained institutional leadership', 'assets/certificates/nptel-active-spoc-2026-cert.jpg', 'Active SPOC 🎖️')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/certificates/nptel-active-spoc-2026-cert.jpg" alt="Active SPOC Jan-Apr 2026" loading="lazy">
+            <span class="event-media-badge">Active SPOC 2026 🎖️</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Active SPOC (Jan–Apr 2026)</div>
+            <div class="event-media-desc">Continuous brand ambassadorship at HIT Coimbatore.</div>
+          </div>
+        </div>
+
+        <!-- 6. Dr. Senthilkumar at IIT Madras Emblem Wall (Portrait) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Dr. R. Senthilkumar at IIT Madras Official Emblem Wall', 'Standing proudly holding framed NPTEL Certificate in front of the grand IIT Madras emblem wall', 'assets/team_photos/nptel-iit-madras-emblem.jpg', 'IIT Madras 🏛️')">
+          <div class="event-card-img-box aspect-portrait">
+            <img src="assets/team_photos/nptel-iit-madras-emblem.jpg" alt="Dr. Senthilkumar at IIT Madras Emblem" loading="lazy">
+            <span class="event-media-badge">IIT Madras Wall 🏛️</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">At IIT Madras Official Emblem</div>
+            <div class="event-media-desc">Holding framed NPTEL Certificate on IITM campus.</div>
+          </div>
+        </div>
+
+        <!-- 7. SPOC Workshop Award Felicitation (Portrait) -->
+        <div class="event-media-card" onclick="openDirectImageModal('NPTEL SPOC Workshop Felicitation Ceremony', 'Dr. R. Senthilkumar receiving SPOC memento plaque and certificate on stage from IIT Madras coordinator', 'assets/team_photos/nptel-spoc-workshop-award.jpg', 'SPOC Workshop 🤝')">
+          <div class="event-card-img-box aspect-portrait">
+            <img src="assets/team_photos/nptel-spoc-workshop-award.jpg" alt="SPOC Workshop Felicitation" loading="lazy">
+            <span class="event-media-badge">SPOC Workshop 🤝</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">State-Level SPOC Felicitation</div>
+            <div class="event-media-desc">Receiving memento plaque &amp; certificate on stage.</div>
+          </div>
+        </div>
+
+        <!-- 8. HIT Faculty Delegation on Campus Steps (Landscape) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Hindusthan Institute Faculty NPTEL Achievers', 'HIT Principal, HoD &amp; faculty delegation celebrating NPTEL honors on campus entrance steps', 'assets/team_photos/nptel-hit-faculty-group.jpg', 'HIT Faculty 👥')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/nptel-hit-faculty-group.jpg" alt="Faculty Group on Steps" loading="lazy">
+            <span class="event-media-badge">HIT Faculty Delegation 👥</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">HIT Faculty NPTEL Stars</div>
+            <div class="event-media-desc">Celebrating institutional NPTEL success on campus steps.</div>
+          </div>
+        </div>
+
+        <!-- 9. Institutional Felicitation in Principal's Office (Portrait) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Institutional Felicitation in Principal Office', 'Dr. R. Senthilkumar felicitated by the Principal of Hindusthan Institute of Technology', 'assets/team_photos/nptel-principal-felicitation.jpg', 'Principal Felicitation 🏛️')">
+          <div class="event-card-img-box aspect-portrait">
+            <img src="assets/team_photos/nptel-principal-felicitation.jpg" alt="Principal Office Felicitation" loading="lazy">
+            <span class="event-media-badge">Principal Felicitation 🏛️</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Felicitation in Principal's Office</div>
+            <div class="event-media-desc">Honored for SWAYAM-NPTEL Chapter Excellence.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENT 4: YOUNG INDIANS (YI), YUVA & CII AWARDS ================= -->
+    <section class="event-showcase-section event-theme-yuva" id="event-yuva">
+      <div class="event-header-bar">
+        <div class="event-title-group">
+          <span class="event-kicker kicker-yuva">🎖️ YOUTH EMPOWERMENT &amp; FACULTY LEADERSHIP</span>
+          <h2 class="event-heading">Young Indians (Yi), YUVA &amp; CII — Excellence in Faculty Leadership</h2>
+          <p class="event-summary-text">
+            Conferred the <strong>Certificate of Appreciation for Excellence in Faculty Leadership - YUVA Club 2024</strong> by Young Indians (Yi) Coimbatore, YUVA, and Confederation of Indian Industry (CII). Also clinched the <strong>YUVA Recognitions 2023 "Best First Impression"</strong> award.
+          </p>
+        </div>
+        <div class="event-badges-stack">
+          <span class="event-meta-pill">🇮🇳 Young Indians (Yi)</span>
+          <span class="event-meta-pill">🏛️ CII &amp; YUVA Club</span>
+          <span class="event-meta-pill">📅 2024 Conclave</span>
+          <span class="event-meta-pill">🏆 Faculty Leadership</span>
+        </div>
+      </div>
+
+      <!-- Zero-Empty-Space Media Grid -->
+      <div class="event-media-grid">
+        <!-- 1. Certificate (Portrait) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Excellence in Faculty Leadership - YUVA Club 2024', 'Official Certificate presented to Dr. R. Senthilkumar by Young Indians (Yi), YUVA and CII', 'assets/certificates/yuva-faculty-leadership-cert.jpg', 'YUVA Certificate 📜')">
+          <div class="event-card-img-box aspect-portrait">
+            <img src="assets/certificates/yuva-faculty-leadership-cert.jpg" alt="Excellence in Faculty Leadership Certificate" loading="lazy">
+            <span class="event-media-badge">Official Certificate 📜</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Excellence in Faculty Leadership</div>
+            <div class="event-media-desc">Presented by Young Indians (Yi) Coimbatore &amp; CII.</div>
+          </div>
+        </div>
+
+        <!-- 2. Student Team on Stage (Landscape) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Dr. R. Senthilkumar &amp; HIT Student Team on Stage', 'Hindusthan Institute of Technology student coordinators and faculty holding YUVA honors at GRG Institutions', 'assets/team_photos/yuva-student-team.jpg', 'YUVA Student Team 👥')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/yuva-student-team.jpg" alt="YUVA Student Team on Stage" loading="lazy">
+            <span class="event-media-badge">Student Team 👥</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Student Coordinators on Stage</div>
+            <div class="event-media-desc">HIT student team holding the YUVA award at GRG Institutions.</div>
+          </div>
+        </div>
+
+        <!-- 3. Stage Felicitation at GRG (Landscape) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Dignitary Stage Felicitation at GRG Institutions', 'Dr. R. Senthilkumar receiving Excellence in Faculty Leadership from Yi Coimbatore and CII leadership', 'assets/team_photos/yuva-stage-felicitation.jpg', 'Felicitation 🎖️')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/yuva-stage-felicitation.jpg" alt="Dignitary Felicitation at GRG Institutions" loading="lazy">
+            <span class="event-media-badge">Stage Felicitation 🎖️</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Dignitary Felicitation Ceremony</div>
+            <div class="event-media-desc">Receiving Certificate of Appreciation on stage from Yi &amp; CII leaders.</div>
+          </div>
+        </div>
+
+        <!-- 4. Yi Convention Banner (Portrait) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Young Indians (Yi) — The Voice of Young Indians Globally', 'Dr. R. Senthilkumar at Yi Young Indians leadership convention banner', 'assets/team_photos/yuva-yi-banner.jpg', 'Yi Convention 🌟')">
+          <div class="event-card-img-box aspect-portrait">
+            <img src="assets/team_photos/yuva-yi-banner.jpg" alt="Yi Young Indians Convention" loading="lazy">
+            <span class="event-media-badge">Yi Convention 🌟</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Young Indians (Yi) Convention</div>
+            <div class="event-media-desc">Representing HIT at the Yi national youth empowerment convention.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENT 5: TAYLOR'S UNIVERSITY (MALAYSIA) — TESS 2023 ================= -->
+    <section class="event-showcase-section event-theme-taylors" id="event-taylors">
+      <div class="event-header-bar">
+        <div class="event-title-group">
+          <span class="event-kicker kicker-taylors">🌍 INTERNATIONAL BEST PAPER AWARD</span>
+          <h2 class="event-heading">Taylor's University, Malaysia — Best Paper Award (TESS 2023)</h2>
+          <p class="event-summary-text">
+            Awarded the prestigious <strong>Certificate of Excellence — BEST PAPER AWARD</strong> for the research paper <em>"Artificial Intelligence Based Lung Cancer Detection Using Deep Learning Techniques"</em> at the First International Conference on Transforming Engineering Systems for Sustainability (TESS 2023) held in Kuala Lumpur, Malaysia.
+          </p>
+        </div>
+        <div class="event-badges-stack">
+          <span class="event-meta-pill">🇲🇾 Taylor's University, Malaysia</span>
+          <span class="event-meta-pill">🏆 BEST PAPER AWARD</span>
+          <span class="event-meta-pill">📅 Nov 29–30, 2023</span>
+          <span class="event-meta-pill">🔬 Deep Learning &amp; Healthcare AI</span>
+        </div>
+      </div>
+
+      <!-- Zero-Empty-Space Media Grid -->
+      <div class="event-media-grid">
+        <!-- 1. Certificate of Excellence (Landscape) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Taylor\'s University Certificate of Excellence (Best Paper)', 'Jointly awarded by Hindusthan &amp; Taylor\'s University, Kuala Lumpur for AI Lung Cancer Detection research', 'assets/certificates/taylors-university-best-paper-cert.jpg', 'Best Paper Cert 📜')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/certificates/taylors-university-best-paper-cert.jpg" alt="Taylor's University Best Paper Certificate" loading="lazy">
+            <span class="event-media-badge">Certificate of Excellence 📜</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Certificate of Excellence (Best Paper)</div>
+            <div class="event-media-desc">AI Based Lung Cancer Detection Using Deep Learning Techniques.</div>
+          </div>
+        </div>
+
+        <!-- 2. Holding Plaque with Chair (Portrait) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Dr. R. Senthilkumar with Taylor\'s University Conference Chair', 'Holding the prestigious BEST PAPER - TESS 2023 award plaque with the Taylor\'s University Conference Chair', 'assets/team_photos/taylors-best-paper-plaque.jpg', 'Award Plaque 🏆')">
+          <div class="event-card-img-box aspect-portrait">
+            <img src="assets/team_photos/taylors-best-paper-plaque.jpg" alt="Holding Best Paper Award Plaque with Chair" loading="lazy">
+            <span class="event-media-badge">Best Paper Plaque 🏆</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">With Conference Chair at Taylor's</div>
+            <div class="event-media-desc">Holding the TESS 2023 Best Paper plaque with the Conference Chair.</div>
+          </div>
+        </div>
+
+        <!-- 3. Stage Felicitation Ceremony (Landscape) -->
+        <div class="event-media-card" onclick="openDirectImageModal('Stage Felicitation Ceremony at Taylor\'s University', 'Dr. R. Senthilkumar receiving the Best Paper Award plaque on stage from the international conference chairs', 'assets/team_photos/taylors-stage-award.jpg', 'Stage Award 🎖️')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/taylors-stage-award.jpg" alt="Stage Award Felicitation" loading="lazy">
+            <span class="event-media-badge">Stage Felicitation 🎖️</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">International Stage Felicitation</div>
+            <div class="event-media-desc">Receiving the Best Paper Award plaque on stage in Malaysia.</div>
+          </div>
+        </div>
+
+        <!-- 4. Oral Presentation in Lecture Theater (Portrait) -->
+        <div class="event-media-card" onclick="openDirectImageModal('AI Lung Cancer Detection Research Presentation', 'Dr. R. Senthilkumar presenting his research in the lecture theater at Taylor\'s University, Malaysia', 'assets/team_photos/taylors-oral-presentation.jpg', 'Oral Defense 🎤')">
+          <div class="event-card-img-box aspect-portrait">
+            <img src="assets/team_photos/taylors-oral-presentation.jpg" alt="Oral Paper Presentation at Taylor's University" loading="lazy">
+            <span class="event-media-badge">Lecture Theater Defense 🎤</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Lecture Hall Oral Presentation</div>
+            <div class="event-media-desc">Delivering deep learning pulmonary diagnosis research in Malaysia.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENT 6: IIT CONCLAVE & TECHNICAL OUTREACH JURIES ================= -->
+    <section class="event-showcase-section event-theme-iit" id="event-iit">
+      <div class="event-header-bar">
+        <div class="event-title-group">
+          <span class="event-kicker kicker-iit">🏛️ NATIONAL TECHNICAL CONCLAVE &amp; JURY LOG</span>
+          <h2 class="event-heading">IIT Conclave Delegation &amp; Keynote Engagements</h2>
+          <p class="event-summary-text">
+            Led student technical delegations at premier Indian Institute of Technology (IIT) conclaves. Presided as Hackathon Judge, Chief Jury, and Keynote Speaker at state and national innovation forums.
+          </p>
+        </div>
+        <div class="event-badges-stack">
+          <span class="event-meta-pill">🏛️ IIT Conclave Delegation</span>
+          <span class="event-meta-pill">👨‍⚖️ HackACE Judge</span>
+          <span class="event-meta-pill">🎤 Keynote Speaker (AlgoVerse)</span>
+        </div>
+      </div>
+
+      <div class="event-media-grid">
+        <!-- 1. IIT Campus Team -->
+        <div class="event-media-card" onclick="openDirectImageModal('IIT Campus National Innovation Conclave', 'Dr. R. Senthilkumar &amp; Student Delegation at Indian Institute of Technology Campus', 'assets/team_photos/iit-team.svg', 'IIT Conclave 🏛️')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/iit-team.svg" alt="IIT Conclave Team" loading="lazy">
+            <span class="event-media-badge">IIT Campus Team 🏛️</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">IIT Campus Research Delegation</div>
+            <div class="event-media-desc">Faculty advisor guiding students at the National Technical Championship.</div>
+          </div>
+        </div>
+
+        <!-- 2. IIT Advisor Certificate -->
+        <div class="event-media-card" onclick="openDirectImageModal('IIT Certificate of Merit &amp; Faculty Advisor Honors', 'Certificate of Merit and Mentorship Recognition presented by IIT Conclave Council', 'assets/certificates/iit-certificate.svg', 'IIT Certificate 📜')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/certificates/iit-certificate.svg" alt="IIT Advisor Certificate" loading="lazy">
+            <span class="event-media-badge">Advisor Certificate 📜</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">IIT Faculty Advisor Recognition</div>
+            <div class="event-media-desc">Certificate of Merit for exemplary delegation leadership.</div>
+          </div>
+        </div>
+
+        <!-- 3. Keynote Resource Person -->
+        <div class="event-media-card" onclick="openDirectImageModal('Keynote Resource Person &amp; Jury Engagements', 'Dr. R. Senthilkumar presiding as Chief Jury &amp; Keynote Resource Person at National Conclave', 'assets/team_photos/jury-engagement.svg', 'Jury &amp; Keynote 🎤')">
+          <div class="event-card-img-box aspect-landscape">
+            <img src="assets/team_photos/jury-engagement.svg" alt="Jury Engagement" loading="lazy">
+            <span class="event-media-badge">Chief Jury &amp; Keynote 🎤</span>
+            <span class="event-zoom-badge">🔍 Zoom</span>
+          </div>
+          <div class="event-media-info">
+            <div class="event-media-title">Keynote Address &amp; Hackathon Jury</div>
+            <div class="event-media-desc">Presided at HackACE, AlgoVerse, and project expos across Tamil Nadu.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENT 7: RESEARCH GRANTS & FUNDED PROJECTS ================= -->
+    <section class="event-showcase-section event-theme-grants" id="event-funding">
+      <div class="event-header-bar">
+        <div class="event-title-group">
+          <span class="event-kicker kicker-grants">💼 SPONSORED R&amp;D &amp; GRANTS</span>
+          <h2 class="event-heading">Government Sponsored Research Projects &amp; Grants</h2>
+          <p class="event-summary-text">
+            Secured over <strong>₹ 18.5 Lakhs</strong> in research and student innovation grants from <strong>DST (Dept. of Science &amp; Technology)</strong>, <strong>TNSCST</strong>, and <strong>CSIR</strong> for assistive devices and smart healthcare IoT.
+          </p>
+        </div>
+        <div class="event-badges-stack">
+          <span class="event-meta-pill">🇮🇳 DST NewGen IEDC</span>
+          <span class="event-meta-pill">🔬 TNSCST Student Project Scheme</span>
+          <span class="event-meta-pill">📜 CSIR Seminar Grant</span>
+        </div>
+      </div>
+
+      <div class="cards-grid-row" id="fundingCardsGrid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+    </section>
+
+    <!-- ================= 8. PUBLICATIONS & PATENTS ================= -->
+    <div class="content-card-frame" id="publications">
+      <div class="section-wrapper" style="margin-top: 0;">
+        <span class="section-badge-tag">RESEARCH PUBLICATIONS</span>
+        <h2 class="section-title">Journal Publications</h2>
+        <div class="section-underline"></div>
+        <p class="section-subtitle">
+          Peer-reviewed articles in IEEE, Elsevier, Springer &amp; Scopus indexed international journals
+        </p>
+        <div class="pub-list" id="publicationsList"></div>
+      </div>
+    </div>
+
+    <div class="content-card-frame" id="patents">
+      <div class="section-wrapper" style="margin-top: 0;">
+        <span class="section-badge-tag" style="background: #fef3c7; color: #92400e; border-color: #fde68a;">INTELLECTUAL PROPERTY</span>
+        <h2 class="section-title">Published Patents</h2>
+        <div class="section-underline" style="background: #b45309;"></div>
+        <p class="section-subtitle">
+          Inventions filed and published with the Indian Patent Office (IPO)
+        </p>
+        <div class="pub-list" id="patentsList"></div>
+      </div>
+    </div>
+
+    <!-- ================= 9. COURSES ================= -->
+    <div class="content-card-frame" id="courses">
+      <div class="section-wrapper" style="margin-top: 0;">
+        <span class="section-badge-tag">ACADEMIC CURRICULA</span>
+        <h2 class="section-title">Courses Handled</h2>
+        <div class="section-underline"></div>
+        <p class="section-subtitle">
+          Undergraduate and Postgraduate curriculum delivery at Hindusthan Institute of Technology
+        </p>
+        <div class="courses-grid" id="coursesGrid"></div>
+      </div>
+    </div>
+
+    <!-- ================= 10. EXPERIENCE & ACADEMICS ================= -->
+    <div class="content-card-frame" id="experience">
+      <div class="section-wrapper" style="margin-top: 0;">
+        <span class="section-badge-tag">CAREER PATH</span>
+        <h2 class="section-title">Professional Experience &amp; Academics</h2>
+        <div class="section-underline"></div>
+        <p class="section-subtitle">
+          Academic appointments, departmental responsibilities, and qualifications
+        </p>
+        <div class="timeline-track" id="experienceTrack"></div>
+      </div>
+    </div>
+
+    <!-- ================= 11. UNIFIED FILTERABLE GALLERY ================= -->
+    <div class="content-card-frame" id="gallery">
+      <div class="section-wrapper" style="margin-top: 0;">
+        <span class="section-badge-tag">PHOTO ARCHIVE</span>
+        <h2 class="section-title">Complete Media Archive &amp; Gallery</h2>
+        <div class="section-underline"></div>
+        <p class="section-subtitle">
+          Explore all high-definition certificates, trophy presentations, and team snapshots
+        </p>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs-row">
+          <button class="filter-btn active" onclick="filterGallery('all', this)">All Media</button>
+          <button class="filter-btn" onclick="filterGallery('sih', this)">SIH 🏆</button>
+          <button class="filter-btn" onclick="filterGallery('techgium', this)">Techgium ⚡</button>
+          <button class="filter-btn" onclick="filterGallery('nptel', this)">NPTEL 🌟</button>
+          <button class="filter-btn" onclick="filterGallery('yuva', this)">Yuva Award 🎖️</button>
+          <button class="filter-btn" onclick="filterGallery('taylors', this)">Taylor's Univ 🌍</button>
+          <button class="filter-btn" onclick="filterGallery('iit', this)">IIT Conclave 🏛️</button>
+          <button class="filter-btn" onclick="filterGallery('funding', this)">Funding 💼</button>
+        </div>
+
+        <div class="cards-grid-row" id="galleryCardsGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= FLOATING SCROLL TOP BUTTON ================= -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll back to top">
+    ↑
+  </button>
+
+  <!-- ================= LIGHTBOX / ITEM MODAL ================= -->
+  <div class="modal-overlay" id="itemModalOverlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-h">
+          <span>📜</span> <span id="modalTitleDisplay">Certificate &amp; Team Details</span>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Preview zone -->
+        <div class="modal-preview-zone">
+          <img id="modalImageDisplay" src="" alt="Preview" class="modal-img">
+        </div>
+
+        <!-- Details Column -->
+        <div class="modal-details-col">
+          <span class="modal-tag">OFFICIAL RECORD</span>
+          <h3 class="modal-headline" id="modalHeadlineDisplay">Title</h3>
+          <div class="modal-issuer" id="modalSubtitleDisplay">Issuer / Subtitle</div>
+          <div class="modal-desc" id="modalDescDisplay">Detailed description here...</div>
+
+          <div class="modal-actions-footer" id="modalActionsZone">
+            <!-- Buttons injected by app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div>
+        <div class="footer-brand">Dr. R. SENTHILKUMAR, M.E., Ph.D.</div>
+        <div class="footer-sub">
+          Associate Professor — Department of Computer Science &amp; Engineering<br>
+          Hindusthan Institute of Technology, Malumichampatti, Coimbatore - 641032
+        </div>
+      </div>
+      <div class="footer-meta-col">
+        <div style="font-size: 0.82rem; color: #a7f3d0;">
+          📞 +91 97895 91714 &nbsp;|&nbsp; ✉️ sentinfo@gmail.com
+        </div>
+        <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.3rem;">
+          Portfolio organized by Event &amp; Innovation Excellence.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

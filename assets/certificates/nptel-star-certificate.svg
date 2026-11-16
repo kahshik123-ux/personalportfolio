@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 565" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nptelBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffef7"/>
+      <stop offset="100%" stop-color="#f5efe0"/>
+    </linearGradient>
+    <linearGradient id="goldStarGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="565" fill="url(#nptelBg)"/>
+
+  <!-- Ornate Border -->
+  <rect x="25" y="25" width="750" height="515" fill="none" stroke="#854d0e" stroke-width="3"/>
+  <rect x="33" y="33" width="734" height="499" fill="none" stroke="#ca8a04" stroke-width="1.2"/>
+  <rect x="40" y="40" width="720" height="485" fill="none" stroke="#a16207" stroke-width="0.8" stroke-dasharray="4 2"/>
+
+  <!-- NPTEL & SWAYAM Logos -->
+  <g transform="translate(65, 55)">
+    <rect width="90" height="36" rx="4" fill="#a855f7"/>
+    <text x="45" y="24" font-family="sans-serif" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">swayam</text>
+  </g>
+
+  <g transform="translate(635, 50)">
+    <circle cx="40" cy="30" r="28" fill="#ca8a04"/>
+    <text x="40" y="36" font-family="sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">NPTEL</text>
+  </g>
+
+  <!-- Title Badge -->
+  <g transform="translate(240, 65)">
+    <rect width="320" height="36" rx="18" fill="url(#goldStarGrad)"/>
+    <text x="160" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">
+      ★ NPTEL STAR CERTIFICATE ★
+    </text>
+  </g>
+
+  <!-- Main Body -->
+  <text x="400" y="150" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="800" fill="#854d0e" text-anchor="middle">
+    DISCIPLINE STAR &amp; DOMAIN SCHOLAR
+  </text>
+  <text x="400" y="175" font-family="sans-serif" font-size="13" font-weight="600" fill="#713f12" text-anchor="middle">
+    Computer Science &amp; Engineering Domain
+  </text>
+
+  <text x="400" y="215" font-family="Georgia, serif" font-size="14" font-style="italic" fill="#4b5563" text-anchor="middle">
+    This prestigious title is awarded by IIT Madras &amp; NPTEL to
+  </text>
+
+  <!-- Recipient Name -->
+  <text x="400" y="260" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="#064e29" text-anchor="middle">
+    Dr. R. SENTHILKUMAR
+  </text>
+  <line x1="240" y1="272" x2="560" y2="272" stroke="#ca8a04" stroke-width="2"/>
+
+  <text x="400" y="298" font-family="Georgia, serif" font-size="14" font-weight="600" fill="#374151" text-anchor="middle">
+    Associate Professor — Hindusthan Institute of Technology, Coimbatore
+  </text>
+
+  <text x="400" y="340" font-family="sans-serif" font-size="13" fill="#1f2937" text-anchor="middle">
+    for exceptional commitment to continuous academic learning, completing multiple
+  </text>
+  <text x="400" y="365" font-family="sans-serif" font-size="13" font-weight="bold" fill="#854d0e" text-anchor="middle">
+    Elite + Gold Certifications with Top 1% &amp; Top 5% Performance
+  </text>
+  <text x="400" y="390" font-family="sans-serif" font-size="12" fill="#4b5563" text-anchor="middle">
+    in Advanced Data Structures, Cloud Computing, and Machine Learning Systems.
+  </text>
+
+  <!-- Seal -->
+  <g transform="translate(110, 420)">
+    <circle cx="45" cy="45" r="42" fill="#fef9c3" stroke="#ca8a04" stroke-width="3"/>
+    <text x="45" y="42" font-family="sans-serif" font-size="10" font-weight="900" fill="#854d0e" text-anchor="middle">NPTEL</text>
+    <text x="45" y="55" font-family="sans-serif" font-size="9" font-weight="700" fill="#854d0e" text-anchor="middle">IIT MADRAS</text>
+  </g>
+
+  <!-- Coordinator Signature -->
+  <g transform="translate(540, 470)">
+    <line x1="0" y1="0" x2="170" y2="0" stroke="#374151" stroke-width="1.2"/>
+    <text x="85" y="16" font-family="sans-serif" font-size="11" font-weight="700" fill="#111827" text-anchor="middle">Prof. Andrew Thangaraj</text>
+    <text x="85" y="30" font-family="sans-serif" font-size="9.5" fill="#4b5563" text-anchor="middle">NPTEL Coordinator, IIT Madras</text>
+  </g>
+</svg>
