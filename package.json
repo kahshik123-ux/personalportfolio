@@ -2,12 +2,15 @@
   "name": "dr-senthilkumar-portfolio",
   "version": "1.0.0",
   "description": "Academic & Innovation Portfolio for Dr. R. Senthilkumar",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "keywords": ["portfolio", "academic", "dr-senthilkumar", "hit-coimbatore"],
+  "keywords": [
+    "portfolio",
+    "academic",
+    "dr-senthilkumar",
+    "hit-coimbatore"
+  ],
   "author": "Dr. R. Senthilkumar",
   "license": "ISC"
 }
-
