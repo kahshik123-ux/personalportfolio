@@ -20,14 +20,7 @@ const portfolioData = {
       orcid: "https://orcid.org/0000-0002-1234-5678",
       github: "https://github.com/drsenthilkumar-hit"
     },
-    bio: "Passionate academician, researcher, and hackathon mentor with over 16+ years of experience in higher education. Specialist in Artificial Intelligence, Internet of Things (IoT), and Embedded Systems. Dedicated to guiding student innovators to national and international victories at Smart India Hackathon, L&T Techgium, IIT Conclaves, YUVA Awards, and Taylor's University Malaysia.",
-    stats: [
-      { label: "Teaching Experience", value: "16+ Years" },
-      { label: "Hackathons Mentored", value: "45+ Wins" },
-      { label: "Funded Grants", value: "₹ 18.5 Lakhs" },
-      { label: "NPTEL Stars & Elite", value: "10+ Honors" },
-      { label: "Publications & Patents", value: "28+ Papers" }
-    ]
+    bio: "Passionate academician, researcher, and hackathon mentor with over 16+ years of experience in higher education. Specialist in Artificial Intelligence, Internet of Things (IoT), and Embedded Systems. Dedicated to guiding student innovators to national and international victories at Smart India Hackathon, L&T Techgium, YUVA Awards, and Taylor's University Malaysia."
   },
 
   // 1. NPTEL Star Section (Screenshot 2 reference + Real Certificates & Photos)
@@ -185,7 +178,7 @@ const portfolioData = {
       date: "22-08-2025",
       title: "4. Hackathon Judge at HackACE 2025",
       organization: "KPR Institute of Engineering, in association with AllCollegeEvent Edtech",
-      image: "assets/team_photos/iit-team.svg",
+      image: "assets/team_photos/jury-engagement.svg",
       role: "Hackathon Judge (Batch 07)",
       description: "Served on the grand judging panel for HackACE 2025 assessing IoT and sustainable smart-city solutions from across India."
     },
@@ -308,22 +301,6 @@ const portfolioData = {
       description: "Student engineering team demonstrating the live IoT automated razor blade inspection testbed and answering jury questions at the Grand Finale booth."
     },
     {
-      id: "hack-iit",
-      title: "IIT National Technical Conclave & Hackathon",
-      project: "Solar-Powered Autonomous Drone Telemetry & Crop Health Analyzer",
-      award: "Best Innovation & Faculty Advisor Commendation",
-      psid: "IIT Inter-College Championship",
-      team: "Team Hindusthan Aerovision",
-      mentor: "Dr. R. Senthilkumar",
-      image: "assets/team_photos/iit-team.svg",
-      certImage: "assets/certificates/iit-certificate.svg",
-      hasCertificate: true,
-      hasPhotos: true,
-      badge: "IIT MERIT AWARD",
-      badgeColor: "bg-red-700",
-      description: "Led the college delegation at the Indian Institute of Technology (IIT) national technical conclave. Guided students through real-time hardware testing and high-throughput vision data processing."
-    },
-    {
       id: "hack-yuva",
       title: "Excellence in Faculty Leadership — YUVA Club 2024",
       project: "Young Indians (Yi) & YUVA Youth Leadership Initiative",
@@ -437,59 +414,7 @@ const portfolioData = {
     }
   ],
 
-  // 4. Grants & Funding Details (Screenshot 5 reference)
-  funding: [
-    {
-      id: "fund-dst",
-      num: "1",
-      title: "Visionary Navigation Cane",
-      agency: "DST (Department of Science & Technology, Govt. of India)",
-      scheme: "Selected & Sponsored by NGI NewGen IEDC",
-      period: "2023–2024",
-      amount: "₹ 2,50,000",
-      image: "assets/team_photos/funding-project.svg",
-      status: "Successfully Completed & Prototyped",
-      description: "DST-funded smart haptic ultrasonic white cane equipped with GPS distress alert, ground pothole sensors, and emergency audio beacon for visually challenged individuals."
-    },
-    {
-      id: "fund-tnscst-fetal",
-      num: "2",
-      title: "Fetal Movement Count Monitor",
-      agency: "Tamil Nadu State Council for Science and Technology (TNSCST)",
-      scheme: "Funded under TNSCST Student Projects Scheme (SPS)",
-      period: "2024–2025",
-      amount: "₹ 1,00,000",
-      image: "assets/team_photos/biomed-hackathon-team.svg",
-      status: "Ongoing / Field Trials",
-      description: "Low-cost wearable IoT system designed for rural primary health centers to track fetal wellbeing in expectant mothers with automated cloud doctor alerts."
-    },
-    {
-      id: "fund-csir",
-      num: "3",
-      title: "CSIR National Seminar Grant",
-      agency: "Council of Scientific & Industrial Research (CSIR)",
-      scheme: "HRD Group — Seminar Grant Division",
-      period: "2022",
-      amount: "₹ 50,000",
-      image: "assets/team_photos/jury-engagement.svg",
-      status: "Conducted Successfully",
-      description: "Organized and convened Two Days National Level Seminar on 'IoT Applications in Real Time: Industrial Automation, Healthcare, and Edge AI Architectures'."
-    },
-    {
-      id: "fund-tnscst-drug",
-      num: "4",
-      title: "IoT Drug Dispatch System",
-      agency: "Tamil Nadu State Council for Science and Technology (TNSCST)",
-      scheme: "TNSCST Student Projects Scheme funding",
-      period: "2021–2022",
-      amount: "₹ 75,000",
-      image: "assets/team_photos/techgium-team.svg",
-      status: "Successfully Completed",
-      description: "Automated RFID & biometric-authenticated prescription dispensing unit preventing medical errors in hospital isolation wards and geriatric clinics."
-    }
-  ],
-
-  // 5. Awards & Accolades Detailed (Specific focus on Yuva, Techgium, Taylor's, SIH, IIT)
+  // 4. Awards & Accolades Detailed
   awards: [
     {
       title: "Smart India Hackathon (SIH 2025) Official Mentor Award",
@@ -530,16 +455,6 @@ const portfolioData = {
       icon: "globe",
       cert: "assets/certificates/taylors-university-best-paper-cert.jpg",
       photo: "assets/team_photos/taylors-best-paper-plaque.jpg"
-    },
-    {
-      title: "IIT National Conclave Faculty Advisor Honors",
-      organization: "Indian Institute of Technology (IIT)",
-      year: "2023",
-      prize: "Excellence Citation & Faculty Advisor Plaque",
-      category: "Premier Institute Conclave",
-      icon: "landmark",
-      cert: "assets/certificates/iit-certificate.svg",
-      photo: "assets/team_photos/iit-team.svg"
     },
     {
       title: "NPTEL Discipline Star & Domain Scholar",
@@ -625,8 +540,6 @@ const portfolioData = {
       duration: "2018 – Present (7+ Years)",
       highlights: [
         "Heading IoT & Embedded AI Innovation Laboratory.",
-        "Chief Faculty Mentor for Smart India Hackathon, L&T Techgium & IIT delegations.",
-        "Secured DST NewGen IEDC, TNSCST, and CSIR research grants.",
         "Guided 15+ student startups and filed 3 Indian patents."
       ]
     },

@@ -10,7 +10,6 @@ function initApp() {
   renderNptelSection();
   renderResourcePerson();
   renderHackathons();
-  renderFunding();
   renderAwards();
   renderPublicationsAndPatents();
   renderExperienceAndAcademics();
@@ -54,9 +53,6 @@ function loadCustomizedImages() {
   });
   portfolioData.nptelStars.forEach(n => {
     if (images[n.id]) n.image = images[n.id];
-  });
-  portfolioData.funding.forEach(f => {
-    if (images[f.id]) f.image = images[f.id];
   });
   portfolioData.resourcePerson.forEach(r => {
     if (images[r.id]) r.image = images[r.id];
@@ -141,16 +137,6 @@ function renderProfile() {
     `;
   }
 
-  // Stats
-  const statsStrip = document.getElementById('profileStatsStrip');
-  if (statsStrip) {
-    statsStrip.innerHTML = p.stats.map(s => `
-      <div class="stat-card">
-        <div class="stat-value">${s.value}</div>
-        <div class="stat-label">${s.label}</div>
-      </div>
-    `).join('');
-  }
 }
 
 // ---------------- RENDER NPTEL STAR (Screenshot 2) ----------------
@@ -246,40 +232,7 @@ function renderHackathons() {
   `).join('');
 }
 
-// ---------------- RENDER FUNDING (Screenshot 5) ----------------
-function renderFunding() {
-  const container = document.getElementById('fundingCardsGrid');
-  if (!container) return;
-
-  container.innerHTML = portfolioData.funding.map(item => `
-    <div class="academic-card" onclick="openItemModal('funding', '${item.id}')">
-      <div class="card-img-wrapper">
-        <img src="${item.image}" alt="${item.title}" class="card-preview-img" loading="lazy">
-        <span class="card-date-badge">${item.period}</span>
-        <span class="card-pill-tag">${item.amount}</span>
-        <div class="card-zoom-indicator">
-          <span>🔬 View Grant Details</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-title">${item.num}. ${item.title}</div>
-        <div class="card-subtitle">${item.agency}</div>
-        <div class="card-org-line">${item.scheme}</div>
-        <div class="card-award-highlight">
-          <span>💼</span> <span>${item.status} (${item.amount})</span>
-        </div>
-        <div class="card-footer-action">
-          <span class="view-details-btn">Grant Details &rarr;</span>
-          <button class="replace-photo-link" onclick="triggerReplaceImage(event, '${item.id}', '${item.title}')">
-            📷 Replace
-          </button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-
-// ---------------- RENDER AWARDS (Yuva, Techgium, Taylor's, SIH, IIT) ----------------
+// ---------------- RENDER AWARDS (Yuva, Techgium, Taylor's, SIH) ----------------
 function renderAwards() {
   const container = document.getElementById('awardsCardsGrid');
   if (!container) return;
@@ -458,25 +411,6 @@ function renderGallery() {
     tag: 'Prototype Demo ⚡'
   });
 
-  // IIT Conclave
-  const iit = portfolioData.hackathons.find(h => h.id === 'hack-iit');
-  if (iit) {
-    items.push({
-      category: 'iit',
-      title: 'IIT Campus Team Delegation',
-      desc: 'National Innovation Conclave with students & faculty advisor',
-      img: iit.image,
-      tag: 'IIT Conclave 🏛️'
-    });
-    items.push({
-      category: 'iit',
-      title: 'IIT Faculty Advisor Certificate',
-      desc: 'Certificate of Merit & Innovation Mentorship',
-      img: iit.certImage,
-      tag: 'IIT Cert 📜'
-    });
-  }
-
   // YUVA Awards Real Photos & Certificate
   items.push({
     category: 'yuva',
@@ -545,17 +479,6 @@ function renderGallery() {
       desc: n.subtitle + ' (' + n.issuer + ')',
       img: n.image,
       tag: 'NPTEL 🌟'
-    });
-  });
-
-  // Funding
-  portfolioData.funding.forEach(f => {
-    items.push({
-      category: 'funding',
-      title: f.title,
-      desc: f.agency + ' (' + f.amount + ')',
-      img: f.image,
-      tag: 'Grant 💼'
     });
   });
 
@@ -739,20 +662,6 @@ window.openItemModal = function(type, id) {
         hasCert: false
       };
     }
-  } else if (type === 'funding') {
-    const item = portfolioData.funding.find(f => f.id === id);
-    if (item) {
-      data = {
-        id: item.id,
-        title: `${item.num}. ${item.title}`,
-        headline: `${item.agency} Sponsored Research`,
-        subtitle: `${item.scheme} | Amount: ${item.amount} (${item.period})`,
-        desc: item.description,
-        image: item.image,
-        hasCert: false,
-        highlight: item.status
-      };
-    }
   } else if (type === 'award') {
     const item = portfolioData.awards[parseInt(id, 10)];
     if (item) {
@@ -874,7 +783,6 @@ function handleFileSelected(event) {
       renderNptelSection();
       renderResourcePerson();
       renderHackathons();
-      renderFunding();
       renderAwards();
       renderGallery();
 

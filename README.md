@@ -59,20 +59,13 @@ All accomplishments are curated **by Event**, pairing each official certificate 
      - International stage felicitation ceremony in Kuala Lumpur, Malaysia.
      - Oral paper defense in the Taylor's University lecture theater.
 
-7. **IIT Conclave & Outreach Keynotes**:
-   - Technical delegation leadership at Indian Institute of Technology conclaves.
-   - Presided as Chief Jury, HackACE Judge, and Keynote Speaker (AlgoVerse).
-
-8. **Research Grants & Sponsored Projects**:
-   - Over ₹18.5 Lakhs in funding from DST NewGen IEDC, TNSCST Student Project Scheme, and CSIR.
-
-9. **Publications, Patents & Academic Curriculum**:
+7. **Publications, Patents & Academic Curriculum**:
    - Indexed research papers across IEEE, Elsevier, Springer, and Scopus.
    - Published Indian Patents on IoT Healthcare, Assistive Devices & Autonomous Sensors.
    - Academic milestones (Ph.D., M.E., B.E. from Anna University affiliated institutions).
 
-10. **Unified Media Archive & Filterable Gallery**:
-    - Filterable by SIH, Techgium, NPTEL, YUVA, Taylor's, IIT, and Grants.
+8. **Unified Media Archive & Filterable Gallery**:
+    - Filterable by SIH, Techgium, NPTEL, YUVA, and Taylor's.
     - Zero empty space, zero black letterboxing with custom aspect ratios (`4/2.85` landscape and `1/1.38` portrait).
 
 ---

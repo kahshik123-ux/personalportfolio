@@ -36,11 +36,6 @@ data.hackathons.forEach(h => {
   checkUrl(h.certImage, `hackathon cert ${h.id}`);
 });
 
-// Funding
-data.funding.forEach(f => {
-  checkUrl(f.image, `funding ${f.id}`);
-});
-
 // Awards
 data.awards.forEach(a => {
   checkUrl(a.photo, `award ${a.id}`);
