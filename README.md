@@ -10,6 +10,7 @@ The portfolio presents the supplied academic record, including:
 - NPTEL achievements, certification courses, and IIT faculty development programmes
 - Journal publications, books, book chapters, and conference contributions
 - Patents, awards, teaching subjects, and community activities
+- Certificate and photo archive with full-size image previews
 
 ## Run locally
 
@@ -27,6 +28,8 @@ portfolio/
 ├── css/style.css    # Responsive layout and styling
 ├── js/data.js       # Academic profile and résumé data
 ├── js/app.js        # Rendering and interface behavior
-├── assets/profile/  # Profile portrait
-└── server.js        # Local static file server
+├── assets/profile/      # Profile portrait
+├── assets/certificates/ # Certificates and recognitions
+├── assets/team_photos/  # Event and campus photo archive
+└── server.js            # Local static file server
 ```

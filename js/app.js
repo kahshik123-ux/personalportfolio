@@ -82,8 +82,11 @@ function initApp() {
     title: `Community activity ${index + 1}`,
     description
   })));
+  renderMediaGrid('certificateGrid', portfolioData.certificates, 'certificates');
+  renderMediaGrid('photoGrid', portfolioData.photos, 'photos');
   document.getElementById('printCvBtn').addEventListener('click', window.triggerPrintCV);
   initNavigation();
+  initMediaDialog();
   initScrollTop();
 }
 
@@ -161,6 +164,50 @@ function renderCardList(containerId, entries) {
       ${entry.link ? `<a class="resume-card-link" href="${escapeHtml(entry.link)}" target="_blank" rel="noopener">View conference proceedings ↗</a>` : ''}
     </article>
   `).join('');
+}
+
+function renderMediaGrid(containerId, entries, mediaType) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = entries.map((entry, index) => `
+    <button class="media-card" type="button" data-media-type="${mediaType}" data-media-index="${index}">
+      <span class="media-card-image-frame">
+        <img src="${escapeHtml(entry.image)}" alt="" class="media-card-image" loading="lazy" decoding="async">
+      </span>
+      <span class="media-card-copy">
+        <span class="media-card-title">${escapeHtml(entry.title)}</span>
+        <span class="media-card-description">${escapeHtml(entry.description)}</span>
+        <span class="media-card-action">View full size ↗</span>
+      </span>
+    </button>
+  `).join('');
+}
+
+function initMediaDialog() {
+  const dialog = document.getElementById('mediaDialog');
+  const image = document.getElementById('mediaDialogImage');
+  const title = document.getElementById('mediaDialogTitle');
+  const description = document.getElementById('mediaDialogDescription');
+
+  document.addEventListener('click', event => {
+    const trigger = event.target.closest('[data-media-type]');
+    if (!trigger) return;
+
+    const entry = portfolioData[trigger.dataset.mediaType][Number(trigger.dataset.mediaIndex)];
+    image.src = entry.image;
+    image.alt = entry.title;
+    title.textContent = entry.title;
+    description.textContent = entry.description;
+    dialog.showModal();
+  });
+
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) dialog.close();
+  });
+
+  dialog.addEventListener('close', () => {
+    image.removeAttribute('src');
+    image.alt = '';
+  });
 }
 
 function initNavigation() {

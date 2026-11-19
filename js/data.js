@@ -355,6 +355,53 @@ const portfolioData = {
     "Climate change and air-pollution awareness programs in schools, colleges, NGOs, and communities.",
     "Tree-planting initiatives at schools, colleges, and government offices.",
     "Student admissions outreach in schools."
+  ],
+
+  certificates: [
+    { title: "IIT Certificate", image: "assets/certificates/iit-certificate.svg", description: "Certificate artwork from the portfolio archive." },
+    { title: "NPTEL Active SPOC Certificate · 2025", image: "assets/certificates/nptel-active-spoc-2025-cert.jpg", description: "NPTEL–SWAYAM Active SPOC Certificate of Appreciation." },
+    { title: "NPTEL Active SPOC Certificate · 2026", image: "assets/certificates/nptel-active-spoc-2026-cert.jpg", description: "NPTEL–SWAYAM Active SPOC Certificate of Appreciation." },
+    { title: "NPTEL Believer", image: "assets/certificates/nptel-believer-cert.jpg", description: "NPTEL–SWAYAM recognition certificate." },
+    { title: "NPTEL Discipline Star", image: "assets/certificates/nptel-discipline-star-cert.jpg", description: "NPTEL–SWAYAM recognition certificate." },
+    { title: "NPTEL Faculty Scholar", image: "assets/certificates/nptel-faculty-scholar.svg", description: "NPTEL certificate artwork from the portfolio archive." },
+    { title: "NPTEL Motivated Learner", image: "assets/certificates/nptel-motivated-learner-cert.jpg", description: "NPTEL–SWAYAM recognition certificate." },
+    { title: "NPTEL Programming Scholar", image: "assets/certificates/nptel-prog-scholar.svg", description: "NPTEL certificate artwork from the portfolio archive." },
+    { title: "NPTEL Star Certificate", image: "assets/certificates/nptel-star-certificate.svg", description: "NPTEL certificate artwork from the portfolio archive." },
+    { title: "Smart India Hackathon Mentor Certificate", image: "assets/certificates/sih-2025-mentor-certificate.jpg", description: "Mentor certificate from the SIH 2025 archive." },
+    { title: "Smart India Hackathon Certificate Artwork", image: "assets/certificates/sih-certificate.svg", description: "Certificate artwork from the portfolio archive." },
+    { title: "Taylor's University Best Paper Certificate", image: "assets/certificates/taylors-university-best-paper-cert.jpg", description: "Best Paper certificate from the Taylor's University archive." },
+    { title: "Taylor's University Certificate Artwork", image: "assets/certificates/taylors-university-certificate.svg", description: "Certificate artwork from the portfolio archive." },
+    { title: "TECHGIUM Certificate of Appreciation", image: "assets/certificates/techgium-certificate.jpg", description: "Certificate of Appreciation from the TECHGIUM archive." },
+    { title: "TECHGIUM Certificate Artwork", image: "assets/certificates/techgium-certificate.svg", description: "Certificate artwork from the portfolio archive." },
+    { title: "YUVA Award Certificate", image: "assets/certificates/yuva-award-certificate.jpg", description: "YUVA award certificate from the portfolio archive." },
+    { title: "YUVA Award Certificate Artwork", image: "assets/certificates/yuva-award-certificate.svg", description: "Certificate artwork from the portfolio archive." }
+  ],
+
+  photos: [
+    { title: "BioMed Hackathon Team Illustration", image: "assets/team_photos/biomed-hackathon-team.svg", description: "Hackathon team illustration from the portfolio archive." },
+    { title: "Funding Project Illustration", image: "assets/team_photos/funding-project.svg", description: "Research project illustration from the portfolio archive." },
+    { title: "IIT Team Illustration", image: "assets/team_photos/iit-team.svg", description: "IIT team illustration from the portfolio archive." },
+    { title: "Jury Engagement Illustration", image: "assets/team_photos/jury-engagement.svg", description: "Jury and engagement illustration from the portfolio archive." },
+    { title: "NPTEL Faculty Group", image: "assets/team_photos/nptel-hit-faculty-group.jpg", description: "Hindusthan Institute of Technology faculty group." },
+    { title: "IIT Madras Emblem", image: "assets/team_photos/nptel-iit-madras-emblem.jpg", description: "IIT Madras campus photograph." },
+    { title: "Principal's Office Felicitation", image: "assets/team_photos/nptel-principal-felicitation.jpg", description: "Institutional felicitation at Hindusthan Institute of Technology." },
+    { title: "NPTEL SPOC Workshop Award", image: "assets/team_photos/nptel-spoc-workshop-award.jpg", description: "SPOC workshop award photograph." },
+    { title: "SIH Jury Evaluation", image: "assets/team_photos/sih-jury-evaluation.jpg", description: "Smart India Hackathon evaluation photograph." },
+    { title: "SIH Grand Finale Backdrop", image: "assets/team_photos/sih-team-backdrop.jpg", description: "Smart India Hackathon Grand Finale photograph." },
+    { title: "SIH Team Illustration", image: "assets/team_photos/sih-team.svg", description: "Hackathon team illustration from the portfolio archive." },
+    { title: "Team TECH_WIZARDS at SIH", image: "assets/team_photos/sih-tech-wizards-team.jpg", description: "Student team photograph from the SIH archive." },
+    { title: "Taylor's University Best Paper Plaque", image: "assets/team_photos/taylors-best-paper-plaque.jpg", description: "Best Paper award photograph from Taylor's University." },
+    { title: "Taylor's University Oral Presentation", image: "assets/team_photos/taylors-oral-presentation.jpg", description: "Conference presentation photograph." },
+    { title: "Taylor's University Stage Award", image: "assets/team_photos/taylors-stage-award.jpg", description: "Conference award photograph." },
+    { title: "Taylor's University Team Illustration", image: "assets/team_photos/taylors-university-team.svg", description: "Conference team illustration from the portfolio archive." },
+    { title: "TECHGIUM Award Felicitation", image: "assets/team_photos/techgium-award-felicitation.jpg", description: "Award felicitation photograph from the TECHGIUM archive." },
+    { title: "TECHGEM Prototype Demonstration", image: "assets/team_photos/techgium-prototype-demo.jpg", description: "Prototype demonstration photograph." },
+    { title: "TECHGIUM Team Booth", image: "assets/team_photos/techgium-team-booth.jpg", description: "Project team photograph at the TECHGIUM booth." },
+    { title: "TECHGIUM Team Illustration", image: "assets/team_photos/techgium-team.svg", description: "Team illustration from the portfolio archive." },
+    { title: "YUVA Stage Felicitation", image: "assets/team_photos/yuva-stage-felicitation.jpg", description: "YUVA stage felicitation photograph." },
+    { title: "YUVA Student Team", image: "assets/team_photos/yuva-student-team.jpg", description: "Student team photograph from the YUVA archive." },
+    { title: "YUVA Team Illustration", image: "assets/team_photos/yuva-team.svg", description: "Team illustration from the portfolio archive." },
+    { title: "Young Indians Banner", image: "assets/team_photos/yuva-yi-banner.jpg", description: "Young Indians event photograph." }
   ]
 };
 
