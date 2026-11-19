@@ -136,7 +136,7 @@ function renderProfile() {
 function renderMetrics() {
   const container = document.getElementById('researchMetrics');
   container.innerHTML = portfolioData.researchMetrics.map(metric => `
-    <article class="metric-card">
+    <article class="metric-card" title="${escapeHtml(metric.label)}">
       <div class="metric-value">${escapeHtml(metric.value)}</div>
       <div class="metric-label">${escapeHtml(metric.label)}</div>
     </article>
@@ -153,7 +153,7 @@ function renderTags(containerId, values) {
 function renderCardList(containerId, entries) {
   const container = document.getElementById(containerId);
   container.innerHTML = entries.map(entry => `
-    <article class="resume-card">
+    <article class="resume-card" title="${escapeHtml(entry.title)}">
       ${entry.kicker ? `<span class="resume-card-kicker">${escapeHtml(entry.kicker)}</span>` : ''}
       <h3 class="resume-card-title">${escapeHtml(entry.title)}</h3>
       ${entry.subtitle ? `<p class="resume-card-subtitle">${escapeHtml(entry.subtitle)}</p>` : ''}
@@ -214,7 +214,7 @@ function renderMediaGroups() {
 
 function renderProjectCard(project) {
   return `
-    <article class="resume-card">
+    <article class="resume-card" title="${escapeHtml(project.title)}">
       <span class="resume-card-kicker">${escapeHtml(project.agency)}</span>
       <h4 class="resume-card-title">${escapeHtml(project.title)}</h4>
       <p class="resume-card-meta">Application ID: ${escapeHtml(project.applicationId)}</p>
@@ -228,7 +228,10 @@ function renderProjectCard(project) {
 
 function renderMediaCards(entries, mediaType) {
   return entries.map(({ entry, index }) => `
-    <button class="media-card" type="button" data-media-type="${mediaType}" data-media-index="${index}">
+    <button class="media-card media-card-${mediaType === 'certificates' ? 'certificate' : 'photo'}" type="button"
+      title="${escapeHtml(entry.title)} — Select to preview and download"
+      aria-label="${escapeHtml(entry.title)}. Select to preview and download."
+      data-media-type="${mediaType}" data-media-index="${index}">
       <span class="media-card-image-frame">
         <img src="${escapeHtml(entry.image)}" alt="" class="media-card-image" loading="lazy" decoding="async">
       </span>
@@ -246,6 +249,7 @@ function initMediaDialog() {
   const image = document.getElementById('mediaDialogImage');
   const title = document.getElementById('mediaDialogTitle');
   const description = document.getElementById('mediaDialogDescription');
+  const download = document.getElementById('mediaDialogDownload');
 
   document.addEventListener('click', event => {
     const trigger = event.target.closest('[data-media-type]');
@@ -256,6 +260,9 @@ function initMediaDialog() {
     image.alt = entry.title;
     title.textContent = entry.title;
     description.textContent = entry.description;
+    download.href = entry.image;
+    download.download = entry.image.split('/').pop();
+    download.textContent = `Download ${trigger.dataset.mediaType === 'certificates' ? 'certificate' : 'photo'}`;
     dialog.showModal();
   });
 
@@ -266,6 +273,8 @@ function initMediaDialog() {
   dialog.addEventListener('close', () => {
     image.removeAttribute('src');
     image.alt = '';
+    download.removeAttribute('href');
+    download.removeAttribute('download');
   });
 }
 
