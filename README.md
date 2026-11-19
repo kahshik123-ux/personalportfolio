@@ -10,6 +10,7 @@ The portfolio presents the supplied academic record, including:
 - NPTEL achievements, certification courses, and IIT faculty development programmes
 - Journal publications, books, book chapters, and conference contributions
 - Patents, awards, teaching subjects, and community activities
+- Separate AICTE/ATAL, NPTEL, SIH, TECHGIUM, YUVA, Taylor's University, and other archive sections
 - Certificate and photo archive with full-size image previews
 
 ## Run locally

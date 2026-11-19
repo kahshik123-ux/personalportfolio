@@ -82,8 +82,7 @@ function initApp() {
     title: `Community activity ${index + 1}`,
     description
   })));
-  renderMediaGrid('certificateGrid', portfolioData.certificates, 'certificates');
-  renderMediaGrid('photoGrid', portfolioData.photos, 'photos');
+  renderMediaGroups();
   document.getElementById('printCvBtn').addEventListener('click', window.triggerPrintCV);
   initNavigation();
   initMediaDialog();
@@ -166,9 +165,69 @@ function renderCardList(containerId, entries) {
   `).join('');
 }
 
-function renderMediaGrid(containerId, entries, mediaType) {
-  const container = document.getElementById(containerId);
-  container.innerHTML = entries.map((entry, index) => `
+function renderMediaGroups() {
+  const navigation = document.getElementById('mediaCategoryNav');
+  const container = document.getElementById('mediaGroups');
+  navigation.innerHTML = portfolioData.mediaCategories.map(category => `
+    <a class="media-category-link" href="#media-${category.id}">${escapeHtml(category.title)}</a>
+  `).join('');
+
+  container.innerHTML = portfolioData.mediaCategories.map(category => {
+    const certificates = portfolioData.certificates
+      .map((entry, index) => ({ entry, index }))
+      .filter(item => item.entry.category === category.id);
+    const photos = portfolioData.photos
+      .map((entry, index) => ({ entry, index }))
+      .filter(item => item.entry.category === category.id);
+    const projects = category.id === 'aicte'
+      ? portfolioData.sponsoredProjects.concat(portfolioData.atalProgram)
+      : [];
+
+    return `
+      <section class="media-category" id="media-${category.id}" aria-labelledby="media-${category.id}-heading">
+        <div class="media-category-heading">
+          <span class="section-badge-tag">${category.id === 'aicte' ? 'SPONSORED RESEARCH' : 'CERTIFICATES & PHOTOS'}</span>
+          <h3 id="media-${category.id}-heading">${escapeHtml(category.title)}</h3>
+        </div>
+        ${projects.length ? `
+          <div class="media-subgroup">
+            <h4 class="media-subgroup-title">Funded projects &amp; programs</h4>
+            <div class="resume-grid">${projects.map(renderProjectCard).join('')}</div>
+          </div>
+        ` : ''}
+        ${certificates.length ? `
+          <div class="media-subgroup">
+            <h4 class="media-subgroup-title">Certificates &amp; recognitions</h4>
+            <div class="media-grid">${renderMediaCards(certificates, 'certificates')}</div>
+          </div>
+        ` : ''}
+        ${photos.length ? `
+          <div class="media-subgroup">
+            <h4 class="media-subgroup-title">Photos &amp; event moments</h4>
+            <div class="media-grid">${renderMediaCards(photos, 'photos')}</div>
+          </div>
+        ` : ''}
+      </section>
+    `;
+  }).join('');
+}
+
+function renderProjectCard(project) {
+  return `
+    <article class="resume-card">
+      <span class="resume-card-kicker">${escapeHtml(project.agency)}</span>
+      <h4 class="resume-card-title">${escapeHtml(project.title)}</h4>
+      <p class="resume-card-meta">Application ID: ${escapeHtml(project.applicationId)}</p>
+      <ul class="resume-card-details">
+        <li>Role: ${escapeHtml(project.role)}</li>
+        <li>Funding: ${escapeHtml(project.amount)}</li>
+      </ul>
+    </article>
+  `;
+}
+
+function renderMediaCards(entries, mediaType) {
+  return entries.map(({ entry, index }) => `
     <button class="media-card" type="button" data-media-type="${mediaType}" data-media-index="${index}">
       <span class="media-card-image-frame">
         <img src="${escapeHtml(entry.image)}" alt="" class="media-card-image" loading="lazy" decoding="async">
