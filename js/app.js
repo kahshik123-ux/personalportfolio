@@ -134,6 +134,34 @@ function renderProfile() {
           <a href="mailto:${p.email}" class="chip-val-link">${p.email}</a>
         </div>
       </div>
+      <div class="info-chip">
+        <span class="chip-icon">🆔</span>
+        <div class="chip-content">
+          <span class="chip-label">ORCID iD:</span>
+          <a href="${p.socialLinks.orcid}" target="_blank" rel="noopener" class="chip-val-link">${p.orcidId}</a>
+        </div>
+      </div>
+      <div class="info-chip">
+        <span class="chip-icon">📚</span>
+        <div class="chip-content">
+          <span class="chip-label">Scopus ID:</span>
+          <span>${p.scopusId}</span>
+        </div>
+      </div>
+      <div class="info-chip full-width">
+        <span class="chip-icon">🔬</span>
+        <div class="chip-content">
+          <span class="chip-label">Web of Science Researcher ID:</span>
+          <span>${p.webOfScienceResearcherId}</span>
+        </div>
+      </div>
+      <div class="info-chip full-width">
+        <span class="chip-icon">🎓</span>
+        <div class="chip-content">
+          <span class="chip-label">Google Scholar ID:</span>
+          <a href="${p.socialLinks.scholar}" target="_blank" rel="noopener" class="chip-val-link">${p.googleScholarId}</a>
+        </div>
+      </div>
     `;
   }
 

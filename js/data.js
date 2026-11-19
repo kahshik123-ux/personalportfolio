@@ -13,11 +13,15 @@ const portfolioData = {
     languages: "Tamil, English",
     email: "sentinfo@gmail.com",
     contact: "+91 97895 91714",
+    orcidId: "0000-0001-8787-4330",
+    scopusId: "57664662300",
+    webOfScienceResearcherId: "NXX-7545-2025",
+    googleScholarId: "I3VYtLYAAAAJ",
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/dr-senthilkumar-r",
-      scholar: "https://scholar.google.com/citations?user=drsenthilkumar",
+      scholar: "https://scholar.google.com/citations?user=I3VYtLYAAAAJ&hl=en",
       researchgate: "https://www.researchgate.net/profile/R-Senthilkumar",
-      orcid: "https://orcid.org/0000-0002-1234-5678",
+      orcid: "https://orcid.org/0000-0001-8787-4330",
       github: "https://github.com/drsenthilkumar-hit"
     },
     bio: "Passionate academician, researcher, and hackathon mentor with over 16+ years of experience in higher education. Specialist in Artificial Intelligence, Internet of Things (IoT), and Embedded Systems. Dedicated to guiding student innovators to national and international victories at Smart India Hackathon, L&T Techgium, YUVA Awards, and Taylor's University Malaysia."
